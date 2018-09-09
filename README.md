@@ -7,7 +7,7 @@ Simple implementation of:
 
 
 Hint:
-- To send between AVD, you can input the phone number 5556 (from first AVD to second AVD) & 5554 (from second AVD to first AVD)
+- To send a message with AVD, you can input the phone number 5556 (from first AVD to second AVD) & 5554 (from second AVD to first AVD)
 
 <img width="200" align="left" alt="portfolio_view" src="https://github.com/naufalprakoso/TemanTeman/blob/master/Screenshot_1536508069.png">
 <img width="200" align="left" alt="portfolio_view" src="https://github.com/naufalprakoso/TemanTeman/blob/master/Screenshot_1536508072.png">
