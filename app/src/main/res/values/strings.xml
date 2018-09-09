@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TemanTeman</string>
+    <string name="action_settings">Settings</string>
+    <string name="major">Major</string>
+    <string name="name">Name</string>
+    <string name="initial">Initial</string>
+    <string name="title_activity_add_friend">Add Friend</string>
+    <string name="friend_initial">Friend initial</string>
+    <string name="friend_name">Friend name</string>
+    <string name="friend_major">Friend major</string>
+    <string name="must_be_filled">Must be filled</string>
+    <string name="initial_must">Initial must be have 2 characters</string>
+    <string name="friend_added">Friend added</string>
+    <string name="position_invalid">Position invalid</string>
+    <string name="title_activity_friend_detail">FriendDetailActivity</string>
+    <string name="name_sample">Muhammad Naufal Firjatulloh Prakoso</string>
+    <string name="image_delete">Image Delete</string>
+    <string name="friend_phone_number">Friend phone number</string>
+    <string name="phone">Phone number</string>
+    <string name="title_activity_send_message">Send Message</string>
+    <string name="your_message">Your message</string>
+    <string name="msg">Message</string>
+</resources>
