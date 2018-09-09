@@ -66,7 +66,7 @@ public class Friend implements Parcelable {
         dest.writeString(this.phone);
     }
 
-    public Friend(Parcel in) {
+    private Friend(Parcel in) {
         id = in.readInt();
         name = in.readString();
         major = in.readString();

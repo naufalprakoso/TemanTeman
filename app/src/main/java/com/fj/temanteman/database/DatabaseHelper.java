@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static String DATABASE_NAME = "DbFriend";
+    private static String DATABASE_NAME = "DbFriend";
     private static final int DATABASE_VERSION = 1;
     private static final String SQL_CREATE_TABLE_NOTE = String.format("CREATE TABLE %s"
                     + " (%s INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -22,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             DatabaseContract.FriendColumns.PHONE
     );
 
-    public DatabaseHelper(Context context) {
+    DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
