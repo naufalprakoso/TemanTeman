@@ -1,7 +1,7 @@
 # TemanTeman
 
 Simple implementation of:
-- RecyclerView (GridLayoutManager)
+- RecyclerView
 - SQLite
 - SMS Manager
 
