@@ -1,9 +1,9 @@
 package com.fj.temanteman.adapters
 
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.fj.temanteman.R
 import com.fj.temanteman.models.Friend
 import kotlinx.android.synthetic.main.item_friend.view.*
@@ -21,10 +21,8 @@ class FriendAdapter(
         this.friends.addAll(friends)
     }
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
-        val view = LayoutInflater.from(viewGroup.context).inflate(R.layout.item_friend, viewGroup, false)
-        return ViewHolder(view)
-    }
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder =
+            ViewHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.item_friend, viewGroup, false))
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) =
             viewHolder.bindItem(friends[i], listener)

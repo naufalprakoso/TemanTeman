@@ -3,17 +3,16 @@ package com.fj.temanteman
 import android.content.Intent
 import android.os.AsyncTask
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 
 import com.fj.temanteman.adapters.FriendAdapter
 import com.fj.temanteman.data.Const
 import com.fj.temanteman.database.FriendHelper
 import com.fj.temanteman.models.Friend
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 import java.util.ArrayList
 
@@ -25,24 +24,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-
-        val fab = findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener(this)
-
-        val recyclerView = findViewById<RecyclerView>(R.id.rv_data)
-        recyclerView.layoutManager = GridLayoutManager(this, 2)
 
         friendHelper = FriendHelper(this)
         friendHelper.open()
 
+        rv_data.layoutManager = GridLayoutManager(this, 2)
         friendAdapter = FriendAdapter {
             val intent = Intent(this, FriendDetailActivity::class.java)
             intent.putExtra(Const.KEY_FRIEND, it)
             startActivity(intent)
         }
-        recyclerView.adapter = friendAdapter
+        rv_data.adapter = friendAdapter
+
+        fab.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {

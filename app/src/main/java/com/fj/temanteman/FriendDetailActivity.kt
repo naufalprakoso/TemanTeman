@@ -2,9 +2,9 @@ package com.fj.temanteman
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 import com.fj.temanteman.data.Const
 import com.fj.temanteman.database.FriendHelper

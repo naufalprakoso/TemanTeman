@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
-    android:id="@+id/cv_friend"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/dimen_8dp"
-    android:layout_marginLeft="@dimen/dimen_4dp"
-    android:layout_marginRight="@dimen/dimen_4dp">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:id="@+id/cv_friend"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:layout_margin="@dimen/dimen_8dp"
+	app:cardCornerRadius="@dimen/dimen_8dp"
+	app:cardElevation="@dimen/dimen_8dp">
 
-    <LinearLayout
-        android:padding="@dimen/dimen_16dp"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:padding="@dimen/dimen_16dp">
 
-        <TextView
-            android:id="@+id/txt_initial"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/initial"
-            android:textSize="@dimen/dimen_22sp"
-            android:textStyle="bold"/>
+		<TextView
+			android:id="@+id/txt_initial"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="@string/initial"
+			android:textSize="@dimen/dimen_22sp"
+			android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txt_name"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/name" />
+		<TextView
+			android:id="@+id/txt_name"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="@string/name" />
 
-        <TextView
-            android:id="@+id/txt_major"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/major" />
+		<TextView
+			android:id="@+id/txt_major"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:text="@string/major" />
 
-    </LinearLayout>
+	</LinearLayout>
 
-</android.support.v7.widget.CardView>
+</androidx.cardview.widget.CardView>
