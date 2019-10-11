@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.item_friend.view.*
 import java.util.ArrayList
 
 class FriendAdapter(
-        private val listener: (Friend) -> Unit
+    private val listener: (Friend) -> Unit
 ) : RecyclerView.Adapter<FriendAdapter.ViewHolder>() {
 
     private var friends: ArrayList<Friend> = arrayListOf()

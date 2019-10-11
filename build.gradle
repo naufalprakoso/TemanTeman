@@ -28,6 +28,15 @@ allprojects {
 	}
 }
 
+allprojects {
+	apply from: "$rootDir/ktlint.gradle"
+	repositories {
+		google()
+		jcenter()
+		maven { url 'https://jitpack.io' }
+	}
+}
+
 task clean(type: Delete) {
 	delete rootProject.buildDir
 }

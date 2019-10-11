@@ -18,8 +18,8 @@ class DatabaseHelper internal constructor(context: Context) : SQLiteOpenHelper(c
     companion object {
         private const val DATABASE_NAME = "DbFriend"
         private const val DATABASE_VERSION = 1
-        private val SQL_CREATE_TABLE_NOTE = String.format("CREATE TABLE %s"
-                + " (%s INTEGER PRIMARY KEY AUTOINCREMENT," +
+        private val SQL_CREATE_TABLE_NOTE = String.format("CREATE TABLE %s" +
+                " (%s INTEGER PRIMARY KEY AUTOINCREMENT," +
                 " %s TEXT NOT NULL," +
                 " %s TEXT NOT NULL," +
                 " %s TEXT NOT NULL," +

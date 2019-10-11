@@ -4,11 +4,11 @@ import android.os.Parcel
 import android.os.Parcelable
 
 class Friend(
-        var id: Int = 0,
-        var name: String = "",
-        var major: String = "",
-        var initial: String = "",
-        var phone: String = ""
+    var id: Int = 0,
+    var name: String = "",
+    var major: String = "",
+    var initial: String = "",
+    var phone: String = ""
 ) : Parcelable {
 
     constructor(parcel: Parcel) : this(
