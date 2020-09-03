@@ -1,6 +1,5 @@
 package com.fj.temanteman.models
 
-import android.os.Parcel
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
@@ -11,4 +10,4 @@ data class Friend(
     var major: String = "",
     var initial: String = "",
     var phone: String = ""
-) : Parcelable 
+) : Parcelable

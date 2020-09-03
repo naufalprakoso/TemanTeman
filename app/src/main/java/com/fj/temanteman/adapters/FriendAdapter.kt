@@ -14,7 +14,7 @@ class FriendAdapter(
     private val listener: (Friend) -> Unit
 ) : RecyclerView.Adapter<FriendAdapter.ViewHolder>() {
 
-    private var friends: ArrayList<Friend> = arrayListOf()
+    private var friends = arrayListOf<Friend>()
 
     fun setFriends(friends: ArrayList<Friend>) {
         this.friends.clear()
@@ -22,7 +22,13 @@ class FriendAdapter(
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder =
-            ViewHolder(LayoutInflater.from(viewGroup.context).inflate(R.layout.item_friend, viewGroup, false))
+            ViewHolder(
+                    LayoutInflater.from(viewGroup.context).inflate(
+                            R.layout.item_friend,
+                            viewGroup,
+                            false
+                    )
+            )
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) =
             viewHolder.bindItem(friends[i], listener)

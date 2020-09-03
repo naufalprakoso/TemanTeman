@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
 import com.fj.temanteman.database.FriendHelper
 import com.fj.temanteman.models.Friend
 import kotlinx.android.synthetic.main.activity_add_friend.*

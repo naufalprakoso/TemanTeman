@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-
 import com.fj.temanteman.adapters.FriendAdapter
 import com.fj.temanteman.data.Const
 import com.fj.temanteman.database.FriendHelper
