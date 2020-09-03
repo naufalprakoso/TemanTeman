@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.item_friend.*
 class FriendDetailActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var friendHelper: FriendHelper
-    private lateinit var friend: Friend
+    private var friend: Friend? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +24,7 @@ class FriendDetailActivity : AppCompatActivity(), View.OnClickListener {
 
         friend = intent.getParcelableExtra(Const.KEY_FRIEND)
 
-        supportActionBar?.title = friend.initial
+        supportActionBar?.title = friend?.initial
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
@@ -32,8 +32,8 @@ class FriendDetailActivity : AppCompatActivity(), View.OnClickListener {
 
         img_delete.setOnClickListener(this)
 
-        txt_major.text = friend.major
-        txt_name.text = friend.name
+        txt_major.text = friend?.major
+        txt_name.text = friend?.name
 
         friendHelper = FriendHelper(this)
         friendHelper.open()
@@ -43,11 +43,11 @@ class FriendDetailActivity : AppCompatActivity(), View.OnClickListener {
         when (v.id) {
             R.id.fab -> {
                 val intent = Intent(this, SendMessageActivity::class.java)
-                intent.putExtra(Const.KEY_PHONE, friend.phone)
+                intent.putExtra(Const.KEY_PHONE, friend?.phone)
                 startActivity(intent)
             }
             R.id.img_delete -> {
-                friendHelper.delete(friend.id)
+                friend?.id?.let { friendHelper.delete(it) }
                 Toast.makeText(this, "Friend deleted", Toast.LENGTH_SHORT).show()
                 finish()
             }

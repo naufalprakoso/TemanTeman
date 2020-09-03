@@ -15,6 +15,7 @@ import com.fj.temanteman.database.DatabaseContract.FriendColumns.Companion.MAJOR
 import com.fj.temanteman.database.DatabaseContract.FriendColumns.Companion.NAME
 import com.fj.temanteman.database.DatabaseContract.FriendColumns.Companion.PHONE
 import com.fj.temanteman.database.DatabaseContract.TABLE_FRIEND
+import kotlin.jvm.Throws
 
 class FriendHelper(private val context: Context) {
 
